@@ -135,6 +135,7 @@ B     2026-06    543,756.91              2.900%            2.900%     15,768.95 
 
 Excerpts from the June 2026 close memo written by `settlerec memo --data data --month 2026-06`:
 
+```markdown
 ## Roll-forward
 
 | Line | Amount |
@@ -144,13 +145,13 @@ Excerpts from the June 2026 close memo written by `settlerec memo --data data --
 | Credits: processor deposits at the bank | 5,244,287.01 |
 | Closing balance (2026-06-30) | 320,748.95 |
 
-### Proof
+## Proof
 
 GL closing balance 320,748.95 = in transit 260,632.63 (140 batches) + open exceptions 60,116.32 (4 items) + unexplained 0.00.
 
 Status: **proved**.
 
-### Open exceptions
+## Open exceptions
 
 | Type | Store | Date | Amount | Effect on clearing | Age (bd) | Reference |
 | --- | --- | --- | ---: | ---: | ---: | --- |
@@ -159,7 +160,7 @@ Status: **proved**.
 | missing deposit | all | 2026-04-14 | 58,726.37 | 58,766.31 | 53 | DEP-B-20260414 |
 | tip adjustment | S24 | 2026-05-09 | 582.75 | -582.75 | 35 | A-20260509-S24 |
 
-### Fee audit
+## Fee audit
 
 | Proc | Month | Gross | Contract eff. rate | Actual eff. rate | Contract fee | Actual fee | Overcharge | Cumulative |
 | --- | --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
@@ -169,6 +170,7 @@ Status: **proved**.
 Processor A charged 2.126% against 2.026% under contract; cumulative overcharge 13,435.47.
 
 The missing deposit's amount is the net the processor reports paying; its effect on clearing is the gross of the batches it covered. The same four items are open at the end of May, so the exception list is the standing reconciliation, not a monthly surprise.
+```
 
 ## Design decisions
 
